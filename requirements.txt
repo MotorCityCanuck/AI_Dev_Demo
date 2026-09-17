@@ -1,0 +1,12 @@
+# AI development demo: player_master Parquet -> Bronze Delta -> Silver Delta.
+# Run ingestion, transformations, and SQL queries on Databricks compute.
+# Databricks Runtime supplies PySpark and Delta Lake, including Parquet support.
+# Do not install separate pyspark or delta-spark packages over the runtime.
+# https://docs.databricks.com/aws/en/languages/python
+#
+# Install test tooling with: python -m pip install -r requirements.txt
+# Local installation alone does not provide a Spark/Databricks runtime;
+# execute tests that need Spark on Databricks compute.
+
+# Unit tests and data-quality checks (pytest 8 supports Python 3.8+).
+pytest>=8.0,<9.0
