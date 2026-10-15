@@ -1,0 +1,24 @@
+bundle:
+  name: player_master_bronze
+
+include:
+  - resources/*.yml
+
+variables:
+  source_path:
+    description: Raw Unity Catalog volume containing player_master.parquet files.
+    default: /Volumes/ai_dev_class_demo/ai_dev_schema/ai_dev_raw
+  catalog:
+    default: ai_dev_class_demo
+  schema:
+    default: bronze_layer
+  table:
+    default: player_master
+  state_volume:
+    description: Managed volume in the destination schema for persistent ingestion state.
+    default: ingestion_state
+
+targets:
+  dev:
+    default: true
+    mode: development
